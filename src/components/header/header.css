@@ -1,0 +1,604 @@
+/* =============================================================================
+   2. TOP HEADER (Logo, Search, Action Icons)
+============================================================================= */
+.top-header {
+  background: var(--white_color);
+  padding: 12px 0;
+  border-bottom: 1px solid var(--border_color);
+  position: sticky;
+  top: 0;
+  z-index: 10;
+}
+
+.top-header .container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 30px;
+}
+
+.search_logo {
+  display: flex;
+  align-items: center;
+  gap: 40px;
+  flex: 1;
+}
+
+.logo img {
+  width: 55px;
+  display: block;
+}
+
+/* Search Box Styling */
+.searchBox_container {
+  position: relative;
+  flex: 1;
+  max-width: 600px;
+  z-index: 1000;
+}
+
+.search_box {
+  display: flex;
+  align-items: center;
+  background: var(--bg_s_color);
+  border: 1.5px solid transparent;
+  border-radius: 50px;
+  overflow: hidden;
+  transition: 0.3s;
+}
+
+.search_box:focus-within {
+  border-color: var(--main_color);
+  background: var(--white_color);
+  box-shadow: 0 0 0 4px var(--bg_s_color);
+}
+
+.search_box input {
+  flex: 1;
+  padding: 12px 20px;
+  background: transparent;
+  border: none;
+  color: var(--color_heading);
+  outline: none;
+}
+
+.search_box button {
+  width: 55px;
+  height: 45px;
+  background: var(--main_color);
+  color: white;
+  border: none;
+  cursor: pointer;
+  font-size: 1.2rem;
+}
+
+/* Search Suggestions List */
+.suggestions {
+  position: absolute;
+  top: 110%;
+  left: 0;
+  width: 100%;
+  background: var(--white_color);
+  border-radius: 12px;
+  border: 1px solid var(--border_color);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+}
+
+.suggestions li a {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  padding: 10px 15px;
+}
+
+.suggestions li a:hover {
+  background: var(--bg_s_color);
+}
+
+.suggestions img {
+  width: 40px;
+  height: 40px;
+  object-fit: cover;
+  border-radius: 4px;
+}
+
+/* Action Icons (Cart, Heart, Theme) */
+.header_icons {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.icon_wrapper,
+.theme-icon-btn {
+  width: 45px;
+  height: 45px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.5rem;
+  color: var(--color_heading);
+  border-radius: 50%;
+  position: relative;
+  transition: 0.3s;
+  cursor: pointer;
+  background: none;
+  border: none;
+}
+
+.icon_wrapper:hover,
+.theme-icon-btn:hover {
+  background: var(--bg_s_color);
+  color: var(--main_color);
+}
+
+.icon_wrapper .count {
+  position: absolute;
+  top: 4px;
+  right: 4px;
+  background: var(--main_color);
+  color: white;
+  font-size: 11px;
+  width: 18px;
+  height: 18px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 2px solid var(--white_color);
+}
+/* =============================================================================
+   BTМ HEADER BASE (Desktop)
+============================================================================= */
+.btm_header {
+  background: var(--main_color);
+  height: 55px;
+  position: relative;
+
+  z-index: 5;
+}
+
+.btm_header .container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 100%;
+}
+
+.nav_wrapper {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  height: 100%;
+}
+
+.drawer_header,
+.close_btn,
+.mobile_menu_btn {
+  display: none; /* Hidden on Desktop */
+}
+
+/* Nav Links */
+.nav_links {
+  display: flex;
+  height: 100%;
+}
+
+.nav_links li {
+  height: 100%;
+  display: flex;
+}
+
+.nav_links a {
+  padding: 0 20px;
+  color: white;
+  display: flex;
+  align-items: center;
+  height: 100%;
+  font-weight: 500;
+}
+
+.nav_links li.active a,
+.nav_links a:hover {
+  background: linear-gradient(to right, var(--main_color), var(--main_color2));
+}
+
+/* Category Button (Desktop) */
+.category_nav {
+  position: relative;
+  height: 100%;
+}
+.category_btn {
+  height: 100%;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 0 20px;
+  background: rgba(0, 0, 0, 0.1);
+  color: white;
+  cursor: pointer;
+}
+
+.category_nav_list {
+  position: absolute;
+  top: 100%;
+  right: 0;
+  left: auto;
+
+  width: 220px;
+  background: var(--white_color);
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+  border-radius: 6px;
+  display: none;
+  max-height: 250px;
+  overflow-y: auto;
+  z-index: 100;
+}
+
+.category_nav_list.active {
+  display: block;
+}
+
+.category_nav_list a {
+  display: block;
+  padding: 12px 15px;
+  color: var(--color_heading);
+  border-bottom: 1px solid var(--bg_s_color);
+}
+.category_nav_list a:last-child {
+  border-bottom: none;
+}
+
+.category_nav_list::-webkit-scrollbar {
+  width: 6px;
+}
+
+.category_nav_list::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+.category_nav_list::-webkit-scrollbar-thumb {
+  background: rgba(0, 0, 0, 0.15);
+  border-radius: 10px;
+}
+
+.category_nav_list::-webkit-scrollbar-thumb:hover {
+  background: rgba(0, 0, 0, 0.3);
+}
+/* Auth Icons */
+.sign_regs {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+.sign_regs a,
+.logout_btn {
+  color: white;
+  font-size: 1.3rem;
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+
+/* =============================================================================
+   4. AUTH PAGES (SignIn & Register)
+============================================================================= */
+.auth-container {
+  padding: 80px 20px;
+  display: flex;
+  justify-content: center;
+}
+
+.auth-card {
+  background: var(--white_color);
+  padding: 40px;
+  border-radius: 15px;
+  border: 1px solid var(--border_color);
+  width: 100%;
+  max-width: 450px;
+}
+
+.auth-card h2 {
+  color: var(--color_heading);
+  margin-bottom: 25px;
+  text-align: center;
+}
+
+.auth-group {
+  margin-bottom: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.auth-group label {
+  font-weight: 600;
+  color: var(--color_heading);
+}
+
+.auth-group input {
+  padding: 12px;
+  border-radius: 8px;
+  border: 1px solid var(--border_color);
+  background: var(--bg_s_color);
+  color: var(--color_heading);
+  outline: none;
+}
+
+.auth-btn {
+  width: 100%;
+  padding: 14px;
+  background: var(--main_color);
+  color: white;
+  border: none;
+  border-radius: 8px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+/* =============================================================================
+   5. PAGES (About, Blog, Contact)
+============================================================================= */
+.page-container {
+  padding: 60px 0;
+}
+
+/* About Page */
+.about-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 30px;
+  margin-top: 40px;
+}
+
+.about-card {
+  background: var(--white_color);
+  padding: 30px;
+  border-radius: 12px;
+  text-align: center;
+  border: 1px solid var(--border_color);
+}
+
+/* Blog Page */
+.blog-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: 30px;
+}
+
+.blog-item {
+  background: var(--white_color);
+  border-radius: 12px;
+  overflow: hidden;
+  border: 1px solid var(--border_color);
+}
+
+.blog-item img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+}
+
+.blog-content {
+  padding: 20px;
+}
+
+/* Contact Page */
+.contact-wrapper {
+  display: grid;
+  grid-template-columns: 1fr 1.5fr;
+  gap: 50px;
+}
+
+.contact-info {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.contact-form {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+/* =============================================================================
+   6. MOBILE RESPONSIVENESS
+============================================================================= */
+.mobile_menu_btn {
+  display: none;
+}
+
+@media (max-width: 992px) {
+  .top-header .container {
+    gap: 15px;
+  }
+  .logo img {
+    width: 45px;
+  }
+}
+
+/* =============================================================================
+   MOBILE RESPONSIVE (Max 768px)
+============================================================================= */
+@media (max-width: 768px) {
+  .top-header .container {
+    gap: 15px;
+  }
+  .logo img {
+    width: 45px;
+  }
+}
+
+@media (max-width: 768px) {
+  /* --- 1. TOP HEADER ADJUSTMENTS --- */
+  body {
+    padding-top: 110px; /* Reduced to match smaller mobile header */
+  }
+  .top-header .container {
+    flex-direction: column;
+  }
+
+  .search_logo {
+    width: 100%;
+    justify-content: space-between;
+  }
+
+  .searchBox_container {
+    order: 3;
+    width: 100%;
+  }
+
+  /* --- 2. BOTTOM HEADER BAR (The Purple Bar) --- */
+  .btm_header {
+    height: 50px;
+  }
+
+  .btm_header .container {
+    justify-content: space-between;
+    position: relative;
+    height: 100%;
+  }
+
+  .mobile_menu_btn {
+    display: flex !important;
+    font-size: 28px;
+    color: white;
+    background: none;
+    border: none;
+    cursor: pointer;
+    align-items: center;
+  }
+
+  /* Position Auth Icons (Sign in/Register) to the far right */
+  .sign_regs {
+    position: absolute;
+    right: 15px;
+    top: 50%;
+    transform: translateY(-50%);
+    display: flex !important;
+    flex-direction: row !important;
+    gap: 15px;
+  }
+
+  /* --- 3. THE SIDE DRAWER (Slide-out Menu) --- */
+  .nav_wrapper {
+    position: fixed;
+    top: 115px;
+    left: -100%;
+    width: 280px;
+    height: 100vh;
+    background: #211b2e;
+    display: flex;
+    flex-direction: column;
+    transition: 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+    z-index: 2000;
+    overflow-y: auto;
+    box-shadow: 10px 0 20px rgba(0, 0, 0, 0.5);
+  }
+
+  .nav_wrapper.mobile_active {
+    left: 0;
+  }
+
+  .drawer_header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    background: var(--main_color);
+    color: white;
+    width: 100%;
+    position: sticky;
+    top: 0;
+    z-index: 400;
+  }
+
+  .close_btn {
+    display: flex;
+    font-size: 26px;
+    color: white;
+    background: none;
+    border: none;
+  }
+
+  .nav_links {
+    flex-direction: column;
+    width: 100%;
+    height: auto;
+    padding-top: 10px;
+  }
+
+  .nav_links li {
+    width: 100%;
+  }
+
+  .nav_links a {
+    color: #ffffff !important;
+    padding: 18px 25px;
+    font-size: 1rem;
+    font-weight: 500;
+    width: 100%;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+    display: block;
+    height: auto;
+  }
+
+  .nav_links li.active a {
+    background: linear-gradient(
+      to right,
+      var(--main_color),
+      var(--main_color2)
+    );
+    color: white !important;
+  }
+
+  /* --- 5. CATEGORIES IN DRAWER --- */
+  .category_nav {
+    width: 100%;
+    margin-top: 10px;
+    height: auto;
+  }
+
+  .category_btn {
+    background: rgba(255, 255, 255, 0.05);
+    color: var(--main_color) !important;
+    padding: 18px 25px;
+    width: 100%;
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+    display: flex;
+    justify-content: space-between;
+    height: auto;
+  }
+
+  .category_nav_list {
+    position: static;
+    width: 100%;
+    background: #1a1a1a;
+    display: none;
+    box-shadow: none;
+  }
+
+  .category_nav_list.active {
+    display: block;
+  }
+
+  .category_nav_list a {
+    padding: 12px 40px !important;
+    font-size: 0.9rem;
+    color: #c4b5fd !important;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.03);
+  }
+
+  .menu_overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.6);
+    z-index: 1500;
+  }
+}

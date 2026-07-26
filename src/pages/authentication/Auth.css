@@ -1,0 +1,107 @@
+.auth-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 80vh;
+  padding: 20px;
+}
+
+.auth-card {
+  background: var(--white_color);
+  padding: 40px;
+  border-radius: 16px;
+  border: 1px solid var(--border_color);
+  width: 100%;
+  max-width: 400px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+}
+
+.auth-card h2 {
+  color: var(--color_heading);
+  margin-bottom: 8px;
+  text-align: center;
+}
+
+.auth-card p {
+  color: var(--p_color);
+  text-align: center;
+  font-size: 0.9rem;
+  margin-bottom: 24px;
+}
+
+.auth-group {
+  margin-bottom: 16px;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.auth-group label {
+  color: var(--color_heading);
+  font-weight: 500;
+  font-size: 0.9rem;
+}
+
+.auth-group input {
+  padding: 12px;
+  border-radius: 8px;
+  border: 1px solid var(--border_color);
+  background: var(--bg_s_color);
+  color: var(--color_heading);
+  outline: none;
+}
+
+.auth-group input:focus {
+  border-color: var(--main_color);
+}
+
+.auth-btn {
+  width: 100%;
+  padding: 12px;
+  background: linear-gradient(to right, var(--main_color), var(--main_color2));
+  color: white;
+  border: none;
+  border-radius: 8px;
+  font-weight: bold;
+  cursor: pointer;
+  margin-top: 10px;
+}
+
+.auth-footer {
+  margin-top: 20px !important;
+}
+
+.auth-footer a {
+  color: var(--main_color);
+  text-decoration: none;
+  font-weight: 600;
+}
+
+/* This should already be in your Auth.css */
+.auth-group {
+  margin-bottom: 16px;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  text-align: left; /* Ensures labels align to the left */
+}
+
+.auth-group label {
+  color: var(--color_heading);
+  font-weight: 500;
+  font-size: 0.9rem;
+}
+
+.auth-group input {
+  padding: 12px;
+  border-radius: 8px;
+  border: 1px solid var(--border_color);
+  background: var(--bg_s_color);
+  color: var(--color_heading);
+  outline: none;
+  transition: border-color 0.3s;
+}
+
+.auth-group input:focus {
+  border-color: var(--main_color);
+}

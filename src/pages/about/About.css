@@ -1,0 +1,72 @@
+.about-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 60px 20px;
+  background-color: var(--bg_color);
+}
+
+.about-header {
+  text-align: center;
+  margin-bottom: 50px;
+}
+
+.about-header h1 {
+  color: var(--color_heading);
+  font-size: 2.5rem;
+}
+
+.about-header p {
+  color: var(--p_color);
+}
+
+.features-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 30px;
+  margin-bottom: 60px;
+}
+
+.feature-card {
+  background: var(--white_color);
+  padding: 40px;
+  border-radius: 15px;
+  text-align: center;
+  border: 1px solid var(--border_color);
+  transition: transform 0.3s ease;
+}
+
+.feature-card:hover {
+  transform: translateY(-5px);
+}
+
+.feature-card .icon {
+  color: var(--main_color);
+  margin-bottom: 20px;
+}
+
+.feature-card h3 {
+  color: var(--color_heading);
+}
+
+.categories-section {
+  text-align: center;
+}
+
+.category-list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 12px;
+  margin-top: 30px;
+}
+
+.category-pill {
+  background: var(--bg_s_color);
+  color: var(--main_color);
+  padding: 8px 20px;
+  border-radius: 50px;
+  font-size: 0.9rem;
+  font-weight: 500;
+  text-transform: capitalize;
+  border: 1px solid var(--border_color);
+}

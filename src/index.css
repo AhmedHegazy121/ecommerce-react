@@ -1,0 +1,250 @@
+/* =============================================================================
+   1. FONTS & THEME VARIABLES
+============================================================================= */
+@import url("https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap");
+
+:root {
+  --main_color: #8b5cf6;
+  --main_color2: #7c83ff;
+  --bg_color: #fcfcfd;
+  --white_color: #ffffff;
+  --bg_s_color: #f5f3ff;
+  --color_heading: #1f2937;
+  --p_color: #6b7280;
+  --border_color: #e9d5ff;
+  --shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+  --header-height: 140px;
+  --header_height_mobile: 10px;
+}
+
+[data-theme="dark"] {
+  --main_color: #a78bfa;
+  --main_color2: #4f46e5;
+  --bg_color: #16121f;
+  --white_color: #211b2e;
+  --bg_s_color: #2d2342;
+  --color_heading: #ffffff;
+  --p_color: #c4b5fd;
+  --border_color: #43385f;
+  --shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+}
+
+/* =============================================================================
+   2. GLOBAL RESET & LAYOUT
+============================================================================= */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background-color: var(--bg_color);
+  color: var(--p_color);
+  font-family: "Inter", sans-serif;
+  transition:
+    background 0.3s ease,
+    color 0.3s ease;
+  line-height: 1.6;
+  overflow-x: hidden;
+}
+/* This pushes the content down so it doesn't hide under the fixed header */
+.content-wrapper {
+  margin-top: var(--header-height);
+  min-height: 100vh;
+}
+/* 3. LAYOUT STRUCTURE */
+.main-header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 200;
+  background: var(--white_color);
+  box-shadow: var(--shadow);
+}
+
+.container {
+  max-width: 1250px;
+  margin: 0 auto;
+  padding: 0 20px;
+  width: 100%;
+}
+
+/* 4. TYPOGRAPHY */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  color: var(--color_heading);
+  font-family: "DM Sans", sans-serif;
+  line-height: 1.2;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+  transition: 0.3s;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+p {
+  color: var(--p_color);
+}
+
+span {
+  color: var(--main_color);
+}
+button,
+input,
+textarea,
+select {
+  border: none;
+  outline: none;
+}
+
+button {
+  cursor: pointer;
+}
+
+/* =============================================================================
+   3. REUSABLE COMPONENTS (Buttons & Loading)
+============================================================================= */
+
+/* The Primary Gradient Button - Used everywhere */
+/* 5. REUSABLE BUTTONS */
+
+.btn {
+  /* 1. Force the container to form around the inner text block elements */
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+
+  /* 2. Controls vertical and horizontal whitespace allocation */
+  padding: 12px 30px;
+  min-width: 140px;
+
+  border-radius: 10px;
+  font-weight: 600;
+  border: none;
+  cursor: pointer;
+  text-decoration: none; /* Strip standard anchor links underscores */
+
+  background: linear-gradient(to right, var(--main_color), var(--main_color2));
+  color: var(--color_heading) !important;
+  box-shadow: 0 4px 15px rgba(139, 92, 246, 0.2);
+  transition: all 0.3s ease;
+}
+.btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 20px rgba(139, 92, 246, 0.3);
+}
+.submit-btn {
+  /* 1. Changes layout from inline link to block element */
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none; /* Removes default link underline */
+
+  /* 2. Controls structure and sizing */
+  padding: 12px 30px;
+  min-width: 140px;
+  border-radius: 10px;
+  font-weight: 600;
+  border: none;
+  cursor: pointer;
+  font-family: "DM Sans", sans-serif;
+
+  /* 3. Colors and design */
+  background: linear-gradient(to right, var(--main_color), var(--main_color2));
+  color: white !important;
+  box-shadow: 0 4px 15px rgba(139, 92, 246, 0.2);
+  transition: all 0.3s ease;
+}
+
+.submit-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 20px rgba(139, 92, 246, 0.3);
+}
+
+/* =============================================================================
+   Skeleton Loading
+============================================================================= */
+.skeleton {
+  background-color: var(--border_color);
+  background-image: linear-gradient(
+    90deg,
+    rgba(255, 255, 255, 0),
+    rgba(255, 255, 255, 0.4),
+    rgba(255, 255, 255, 0)
+  );
+  background-size: 200% 100%;
+  animation: shine 1.5s infinite linear;
+  border-radius: 8px;
+}
+
+@keyframes shine {
+  to {
+    background-position: 200% 0;
+  }
+}
+/* =============================================================================
+   Toast Notifications
+============================================================================= */
+
+.toast_wrapper {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  min-width: 300px;
+  max-width: 300px;
+}
+
+.toast_wrapper .toast_img {
+  width: auto;
+  height: 50px;
+  object-fit: cover;
+}
+
+.toast_wrapper .toast_content {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+
+  font-size: 14px;
+}
+
+.toast_wrapper strong {
+  display: -webkit-box;
+  overflow: hidden;
+
+  -webkit-line-clamp: 1;
+  -webkit-box-orient: vertical;
+}
+
+.toast_wrapper .btn {
+  margin-top: 5px;
+  font-size: 13px;
+}
+/* 6. RESPONSIVE BREAKPOINTS */
+
+@media (max-width: 768px) {
+  :root {
+    margin-top: var(--header_height_mobile);
+  }
+
+  .container {
+    padding: 0 15px;
+  }
+}

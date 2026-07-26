@@ -1,0 +1,223 @@
+/* =============================================================================
+   Product Details Page
+   -----------------------------------------------------------------------------
+   Styles for the product details layout, image gallery,
+   product information, action buttons, and loading skeleton.
+============================================================================= */
+
+/* =============================================================================
+   Product Details Layout
+============================================================================= */
+
+.item_details {
+  padding: 50px 0;
+}
+
+.item_details .container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* =============================================================================
+   Product Images
+============================================================================= */
+
+.item_details .imgs_item {
+  width: 40%;
+}
+
+/* Main Product Image */
+.item_details .imgs_item .big_img {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 30px;
+}
+
+.item_details .imgs_item .big_img img {
+  width: auto;
+  max-height: 450px;
+}
+
+/* Thumbnail Gallery */
+.item_details .imgs_item .sm_img {
+  display: flex;
+  justify-content: space-between;
+  cursor: pointer;
+}
+
+.item_details .imgs_item .sm_img .img_div_sm {
+  width: 24%;
+}
+
+.item_details .imgs_item .sm_img img {
+  width: auto;
+  max-height: 150px;
+  object-fit: cover;
+}
+
+/* =============================================================================
+   Product Information
+============================================================================= */
+
+.item_details .details_item {
+  width: 58%;
+}
+
+/* Product Title */
+.item_details .details_item .name {
+  margin-bottom: 30px;
+  color: var(--main_color);
+}
+
+/* Product Rating */
+.item_details .details_item .stars svg {
+  fill: #f8d941;
+  font-size: 20px;
+}
+
+/* Product Price */
+.item_details .details_item .price {
+  margin: 20px 0;
+  font-size: 22px;
+}
+
+/* Product Specifications */
+.item_details .details_item h5 {
+  margin-bottom: 20px;
+  font-size: 16px;
+  font-weight: 500;
+}
+
+/* Product Description */
+.item_details .details_item .desc {
+  line-height: 1.5;
+}
+
+/* Stock Information */
+.item_details .details_item .stock {
+  margin-top: 15px;
+  font-size: 20px;
+}
+
+/* =============================================================================
+   Add to Cart Button
+============================================================================= */
+
+.item_details .details_item .btn {
+  padding: 12px 15px;
+  font-size: 16px;
+  border: 1px solid var(--main_color);
+  border-radius: 6px;
+  transition: 0.3s ease-in-out;
+}
+
+/* Disabled state when product is already in the cart */
+.item_details .details_item .btn.in_cart {
+  background: transparent;
+  color: var(--main_color);
+  pointer-events: none;
+}
+
+.item_details .details_item .btn svg {
+  font-size: 18px;
+}
+
+/* =============================================================================
+   Product Actions
+============================================================================= */
+
+.item_details .details_item .icons {
+  display: flex;
+  gap: 20px;
+  margin: 20px 30px;
+  transition: 0.3s;
+}
+
+.item_details .details_item .icons span {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 40px;
+  height: 40px;
+  background: var(--bg_s_color);
+  border-radius: 50%;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+/* Favorite state */
+.item_details .details_item .icons span.in_fav {
+  background: var(--main_color);
+}
+
+.item_details .details_item .icons span.in_fav svg {
+  fill: var(--white_color);
+}
+
+/* Hover effect */
+.item_details .details_item .icons span:hover {
+  background: var(--main_color);
+}
+
+.item_details .details_item .icons span:hover svg {
+  fill: var(--white_color);
+}
+
+/* =============================================================================
+   Loading Skeleton
+============================================================================= */
+
+/* Placeholder layout displayed while product data is loading. */
+
+.loading_item .item_details .imgs_item {
+  height: 600px;
+}
+
+.loading_item .item_details .details_item {
+  height: 600px;
+  margin-left: 30px;
+  padding-top: 100px;
+}
+
+.loading_item .item_details .details_item h5 {
+  height: 30px;
+  margin-bottom: 50px;
+}
+
+/* =============================================================================
+   Mobile Product Details Layout Adjustment (768px and below)
+============================================================================= */
+@media (max-width: 768px) {
+  .item_details .container {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 30px;
+    padding: 0 15px;
+  }
+
+  .item_details .details_item {
+    order: 1;
+    width: 100%;
+  }
+
+  .item_details .imgs_item {
+    order: 2;
+    width: 100%;
+  }
+
+  .item_details .imgs_item .big_img {
+    margin-bottom: 20px;
+  }
+
+  .item_details .imgs_item .big_img img {
+    max-height: 300px;
+    width: auto;
+    object-fit: contain;
+  }
+
+  .item_details .imgs_item .sm_img img {
+    max-height: 80px;
+  }
+}

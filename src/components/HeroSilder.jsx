@@ -10,6 +10,10 @@ import "swiper/css/pagination";
 
 // Swiper Modules
 import { Pagination, Autoplay } from "swiper/modules";
+// Iamges
+import hero1 from "../img/banner_Hero1-removebg-preview.png";
+import hero2 from "../img/banner_Hero2-removebg-preview.png";
+import hero3 from "../img/banner_Hero3-removebg-preview.png";
 
 /* =============================================================================
    Hero Slider Data
@@ -20,17 +24,17 @@ import { Pagination, Autoplay } from "swiper/modules";
 const heroSlides = [
   {
     id: 1,
-    image: "src/img/banner_Hero1-removebg-preview.png",
+    image: hero1,
     title: "Microsoft Xbox 360 Controller",
   },
   {
     id: 2,
-    image: "src/img/banner_Hero2-removebg-preview.png",
+    image: hero2,
     title: "Microsoft Xbox 360 Controller",
   },
   {
     id: 3,
-    image: "src/img/banner_Hero3-removebg-preview.png",
+    image: hero3,
     title: "Microsoft Xbox 360 Controller",
   },
 ];

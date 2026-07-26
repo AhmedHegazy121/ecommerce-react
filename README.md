@@ -10,7 +10,6 @@ Designed with clean architecture, reusable components, and responsive layouts fo
 
 ## 📸 Preview
 
-> Add screenshots or a GIF here after deployment.
 <div align="center" style="margin: 25px 0; max-width: 800px; margin-left: auto; margin-right: auto;">
 
   <!-- Image 1 (Open by default) -->

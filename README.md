@@ -3,8 +3,9 @@
 A modern, responsive e-commerce web application built with **React** and **Vite**. The application allows users to browse products, search with live suggestions, view product details, manage a shopping cart, save favorites, and switch between light and dark themes.
 
 Designed with clean architecture, reusable components, and responsive layouts for desktop, tablet, and mobile devices.
-  Live Demo
-[👉 Click here to view the live project](https://ecommerce-react-mq7f.vercel.app/)
+
+ 
+ Live Demo [👉 Click here to view the live project](https://ecommerce-react-mq7f.vercel.app/)
 ---
 
 ## 📸 Preview

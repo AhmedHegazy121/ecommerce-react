@@ -1,16 +1,251 @@
-# React + Vite
+#  [🛒 E-Commerce React Store](https://ecommerce-react-mq7f.vercel.app/)
 
-This template provides a minimal setup to get React working in Vite with HMR and some Oxlint rules.
+A modern, responsive e-commerce web application built with **React** and **Vite**. The application allows users to browse products, search with live suggestions, view product details, manage a shopping cart, save favorites, and switch between light and dark themes.
 
-Currently, two official plugins are available:
+Designed with clean architecture, reusable components, and responsive layouts for desktop, tablet, and mobile devices.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+---
 
-## React Compiler
+## 📸 Preview
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+> Add screenshots or a GIF here after deployment.
 
-## Expanding the Oxlint configuration
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and Oxlint's TypeScript related rules in your project.
+
+---
+
+## ✨ Features
+
+- 🛍️ Browse products by category
+- 🔍 Live product search with suggestions
+- 📄 Product details page
+- ❤️ Favorites (Wishlist)
+- 🛒 Shopping cart
+- ➕ Increase & decrease product quantity
+- 🌙 Light / Dark mode
+- 💾 LocalStorage persistence
+- 🎞️ Page transition animations
+- 📱 Fully responsive design
+- ⚡ Fast loading with skeleton loaders
+- 🔥 Toast notifications
+- 🎠 Hero slider using Swiper.js
+
+---
+
+## 🛠️ Built With
+
+- React
+- Vite
+- React Router DOM
+- Framer Motion
+- Swiper.js
+- React Icons
+- React Hot Toast
+- CSS3
+- DummyJSON API
+
+---
+
+## 📁 Project Structure
+```
+
+ecommerce-react/
+│
+├── public/
+│
+├── src/
+│
+├── api/
+│   ├── client.js
+│   └── product.js
+│
+├── assets/
+│   ├── images/
+│   │   ├── logo.png
+│   │   ├── hero1.png
+│   │   ├── hero2.png
+│   │   ├── hero3.png
+│   │   └── ...
+│   │
+│   ├── icons/
+│   └── fonts/
+│
+├── components/
+│   │
+│   ├── common/
+│   │   ├── PageTransition.jsx
+│   │   ├── ScrollToTop.jsx
+│   │   ├── Button.jsx
+│   │   ├── EmptyState.jsx
+│   │   └── LoadingSpinner.jsx
+│   │
+│   ├── header/
+│   │   ├── TopHeader.jsx
+│   │   ├── BtmHeader.jsx
+│   │   ├── SearchBox.jsx
+│   │   └── header.css
+│   │
+│   ├── hero/
+│   │   └── HeroSlider.jsx
+│   │
+│   ├── product/
+│   │   ├── Product.jsx
+│   │   ├── SlideProduct.jsx
+│   │   ├── SlideProductLoading.jsx
+│   │   ├── ProductCard.jsx
+│   │   └── product.css
+│   │
+│   ├── footer/
+│   │   ├── Footer.jsx
+│   │   └── footer.css
+│   │
+│   └── ui/
+│       ├── Badge.jsx
+│       ├── Modal.jsx
+│       ├── Breadcrumb.jsx
+│       └── Skeleton.jsx
+│
+├── context/
+│   ├── CartContext.jsx
+│   └── ThemeContext.jsx
+│
+├── hooks/
+│   ├── useDebounce.js
+│   ├── useLocalStorage.js
+│   └── useTheme.js
+│
+├── pages/
+│   │
+│   ├── Home/
+│   │   ├── Home.jsx
+│   │   └── home.css
+│   │
+│   ├── ProductDetails/
+│   │   ├── ProductDetails.jsx
+│   │   ├── ProductImages.jsx
+│   │   ├── ProductInfo.jsx
+│   │   ├── ProductDetailsLoading.jsx
+│   │   └── productDetails.css
+│   │
+│   ├── Category/
+│   │   ├── CategoryPage.jsx
+│   │   └── categoryPage.css
+│   │
+│   ├── Search/
+│   │   └── SearchResults.jsx
+│   │
+│   ├── Cart/
+│   │   ├── Cart.jsx
+│   │   └── cart.css
+│   │
+│   ├── Favorites/
+│   │   ├── FavoritesPage.jsx
+│   │   └── favorites.css
+│   │
+│   ├── About/
+│   │   ├── About.jsx
+│   │   └── about.css
+│   │
+│   ├── Blog/
+│   │   ├── Blog.jsx
+│   │   └── blog.css
+│   │
+│   ├── Contact/
+│   │   ├── Contact.jsx
+│   │   └── contact.css
+│   │
+│   └── Auth/
+│       ├── SignIn.jsx
+│       ├── Register.jsx
+│       └── auth.css
+│
+├── styles/
+│   ├── globals.css
+│   ├── variables.css
+│   ├── animations.css
+│   ├── responsive.css
+│   └── utilities.css
+│
+├── utils/
+│   ├── formatPrice.js
+│   ├── truncateText.js
+│   └── helpers.js
+│
+├── App.jsx
+├── main.jsx
+└── vite-env.d.ts (if TypeScript)
+│
+├── .gitignore
+├── package.json
+├── README.md
+└── vite.config.js
+```
+
+---
+
+
+## 🔗 API
+
+This project uses the **DummyJSON API**.
+
+https://dummyjson.com/
+
+---
+
+## 📱 Responsive Design
+
+The application is designed to work across:
+
+- Mobile Phones
+- Tablets
+- Laptops
+- Desktop Screens
+
+---
+
+## 📚 What I Learned
+
+During this project I practiced and improved my skills in:
+
+- React Hooks
+- Component Architecture
+- Context API
+- React Router
+- API Integration
+- State Management
+- Responsive Design
+- Reusable Components
+- Theme Switching
+- Performance Optimization
+- Project Refactoring
+- Clean Code Organization
+
+---
+
+## 🔮 Future Improvements
+
+- User Authentication
+- Checkout Page
+- Payment Integration
+- Product Reviews
+- Product Filtering
+- Sorting Options
+- Pagination
+- Admin Dashboard
+- Backend Integration
+- Order History
+
+---
+
+## 👨‍💻 Author
+
+**Ahmed Hegazy**
+
+GitHub:
+https://github.com/AhmedHegazy121
+
+---
+
+## ⭐ Support
+
+If you like this project, consider giving it a ⭐ on GitHub.

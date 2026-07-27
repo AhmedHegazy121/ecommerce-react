@@ -8,7 +8,7 @@ Designed with clean architecture, reusable components, and responsive layouts fo
  Live Demo [👉 Click here to view the live project](https://ecommerce-react-mq7f.vercel.app/)
 
 
-## 📸 Preview
+
 
 <div align="center" style="margin: 25px 0; max-width: 800px; margin-left: auto; margin-right: auto;">
 

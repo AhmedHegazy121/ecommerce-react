@@ -6,7 +6,7 @@ Designed with clean architecture, reusable components, and responsive layouts fo
 
  
  Live Demo [👉 Click here to view the live project](https://ecommerce-react-mq7f.vercel.app/)
----
+
 
 ## 📸 Preview
 

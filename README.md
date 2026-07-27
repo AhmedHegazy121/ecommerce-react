@@ -75,7 +75,7 @@ Designed with clean architecture, reusable components, and responsive layouts fo
       <img src="images/9.png" alt="Arabic Localized Interface" style="max-width: 100%; height: auto; border-radius: 16px; box-shadow: 0px 10px 30px rgba(0, 0, 0, 0.3); margin-top: 15px; border: 1px solid rgba(255, 255, 255, 0.1);" />
     </div>
   </details>
-
+  </div>
 
 
 ---
